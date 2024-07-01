@@ -7,8 +7,11 @@ import Menu from '@mui/material/Menu';
 import "../index.css";
 import MenuItem from '@mui/material/MenuItem';
 import { NavLink } from 'react-router-dom'
+import { useSelector } from 'react-redux';
 
 function Header() {
+    const cartData = useSelector((state)=>state.allCart);
+    console.log(cartData)
 
     const [anchorEl, setAnchorEl] = useState(null);
     const open = Boolean(anchorEl);
@@ -23,7 +26,7 @@ function Header() {
         <>
             <Navbar bg="dark" data-bs-theme="dark" className='sticky-navbar'>
                 <Container>
-                    <Navbar.Brand href="#home" style={{ fontSize: "30px" }}><i class="fa-brands fa-shopify"></i></Navbar.Brand>
+                    <Navbar.Brand href="#home" style={{ fontSize: "30px" }}><i className="fa-brands fa-shopify"></i></Navbar.Brand>
                     <Nav className="me-auto">
                         <Nav.Link href="/"><NavLink to="/" className="text-decoration-none text-muted" >Home</NavLink></Nav.Link>
                         <Nav.Link><NavLink to="/cart" className="text-decoration-none text-muted" >Add to Cart</NavLink></Nav.Link>

@@ -9,7 +9,7 @@ function Cards() {
 
     return (
         <div className='container mt-3'>
-            <h2 className='text-center'>Add to Cart Projects</h2>
+            <h2 className='text-center'>Apna Restaurant</h2>
             <div className="row d-flex justify-content-center align-items-center mb-5">
                 {data.map((element) => (
                     <div key={element.id} className="col-sm-12 col-md-6 col-lg-4 d-flex align-items-stretch">
